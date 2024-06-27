@@ -1,0 +1,46 @@
+THIS TOPIC IS VERY IMPORTANT WHEN IT COMES TO LANDING INTERVIEWS/ JOBS
+Big O Notation:
+'making code quicker and more effiecient. Identifying code that may be slowing 
+down the program'
+to the Nth means how many operations the function needs to perform to execute;
+
+HOW DO YOU KNOW WHICH VERSION OF CODE IS 'BEST?'
+
+
+
+example:
+
+function addUptoSecond(n){
+    return n  * (n+1) / 2
+}
+
+^ This uses only 3 operations
+runtime is O(1);
+
+function addUpToFirst(n){
+    let total = 0;
+
+    for(let i=0; i< n; i++){
+        total += i;
+    }
+
+    return total;
+}
+^ This uses a number operations bounded by a multiple of n!!!! INEFFECIENT
+runtime O(n);
+
+
+Big O Notation is concerned with 'worst case' of algorithm performance:
+'what is the max amount of runthroughs can this function possible do'
+
+function allEven(nums) {
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+this has a runtime of O(n) even though it may not always take n times to execute.
+
